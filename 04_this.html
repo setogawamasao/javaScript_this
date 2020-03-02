@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head> </head>
+  <body>
+    <script>
+      var obj = {
+        returnThis: function() {
+          return this;
+        },
+        alert: function(msg) {
+          console.log(msg);
+        }
+      };
+
+      // func変数にobjオブジェクトはreturnThisという関数を割り当てる
+      var func = obj.returnThis;
+
+      obj.returnThis().alert("hello");
+      // => objオブジェクトのalert関数が呼ばれて、hello とコンソールに表示
+      func().alert("hello");
+      // => グローバルとして呼ばれるアラート表示
+    </script>
+  </body>
+</html>

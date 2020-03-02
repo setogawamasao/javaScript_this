@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head> </head>
+  <body>
+    <script>
+      // // this は function を呼んだ時の . の前についているオブジェクトを指している
+      // thisを表示する関数
+      function test() {
+        console.log(this);
+      }
+      //Window {frames: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …}
+      test();
+      // 呼び出し時に . がないので、 this はグローバルオブジェクト
+      // ブラウザでは Window オブジェクトになります
+    </script>
+  </body>
+</html>
